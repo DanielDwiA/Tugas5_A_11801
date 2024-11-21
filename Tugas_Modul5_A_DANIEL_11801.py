@@ -5,8 +5,7 @@ from PIL import Image
 import os
 
 # Definisikan jalur model
-model_directory = r"C:\Tugas5_A_11801\best_model.pkl"
-model_path = os.path.join(model_directory, r'best_model.pkl')
+model_path = r'best_model.pkl'
 
 # Load the model
 if os.path.exists(model_path):
@@ -62,5 +61,5 @@ if os.path.exists(model_path):
                 st.image(image, caption=f"Gambar: {uploaded_file.name}", use_column_width=True)
     except Exception as e:
         st.error(f"Error: {str(e)}")
-    else:
-        st.error("File model tidak ditemukan.")
+else:
+    st.error("File model tidak ditemukan.")
